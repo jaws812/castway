@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles\styles.css" />
+    <title>Castway</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner container">
+        <a href="#" class="header__logo logo">
+          <img
+            src="images/logo.svg"
+            alt="Castway"
+            class="logo__image"
+            width="160"
+            height="33"
+            loading="lazy"
+          />
+        </a>
+        <nav class="header__menu hidden-mobile">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">Home</li>
+            <li class="header__menu-item">Episodes</li>
+            <li class="header__menu-item">About</li>
+            <li class="header__menu-item">Contact</li>
+          </ul>
+        </nav>
+        <button
+          class="header__burger-button burger-button visible-mobile"
+          onClick="mobileOverlay.showModal()"
+          type="button"
+        >
+          <span class="visually-hidden">Open navigation menu</span>
+        </button>
+      </div>
+    </header>
+    <main class="content">
+      <section class="section container">
+        <div class="section__body">
+          <div class="hero">
+            <div class="hero__image-wrapper">
+              <img
+                src="images/producer.svg"
+                alt=""
+                class="hero__image"
+                width="650"
+                height="873"
+                loading="lazy"
+              />
+            </div>
+            <div class="hero__wrapper">
+              <h1 class="hero__title">
+                Take your<br />
+                podcast to the<br />
+                <span class="hero__title-next">next</span> <span class="hero__title-level">level</span>
+              </h1>
+              <p class="hero__listen">Listen on</p>
+              <ul class="hero__list">
+                <li class="hero__item">
+                  <span class="visually-hidden">Spotify</span>
+                  <a href="#" class="hero__item-link"
+                    ><img
+                      src="images/spotify.svg"
+                      alt="Spotify"
+                      class="hero__item-image"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                  /></a>
+                </li>
+                <li class="hero__item">
+                  <span class="visually-hidden">Music</span>
+                  <a href="#" class="hero__item-link"
+                    ><img
+                      src="images/music.svg"
+                      alt="Music"
+                      class="hero__item-image"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                  /></a>
+                </li>
+                <li class="hero__item">
+                  <span class="visually-hidden">SoundCloud</span>
+                  <a href="#" class="hero__item-link"
+                    ><img
+                      src="images/soundcloud.svg"
+                      alt="SoundCloud"
+                      class="hero__item-image"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                  /></a>
+                </li>
+                <li class="hero__item">
+                  <span class="visually-hidden">iTunes</span>
+                  <a href="#" class="hero__item-link"
+                    ><img
+                      src="images/itunes.svg"
+                      alt="iTunes"
+                      class="hero__item-image"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                  /></a>
+                </li>
+                <li class="hero__item">
+                  <span class="visually-hidden">Radio</span>
+                  <a href="#" class="hero__item-link"
+                    ><img
+                      src="images/radio.svg"
+                      alt="Radio"
+                      class="hero__item-image"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+      <form class="mobile-overlay__close-button-wrapper" method="dialog">
+        <button class="mobile-overlay__close-button cross-button" type="submit">
+          <span class="visually-hidden">Close nav menu</span>
+        </button>
+      </form>
+      <div class="mobile-overlay__body">
+        <ul class="mobile-overlay__list">
+          <li class="mobile-overlay__item">
+            <a href="#" class="mobile-overlay__link">Home</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a href="#" class="mobile-overlay__link">Episodes</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a href="#" class="mobile-overlay__link">About</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a href="#" class="mobile-overlay__link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </dialog>
+  </body>
+</html>
