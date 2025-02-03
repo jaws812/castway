@@ -1,0 +1,53 @@
+.episode {
+  padding-top: 100px;
+  padding-bottom: 160px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 65px;
+
+  @include mobile {
+    row-gap: 30px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-title {
+      letter-spacing: 2.88px;
+      @include fluid-text(64, 20) ;
+    }
+
+    &-button {
+      @include reset-button;
+      color: var(--color-white);
+      padding-left: 20px;
+      padding-right: 15px;
+      height: var(--button-height);
+      border-radius: var(--border-radius-small);
+      background-color: var(--color-blue);
+      @include fluid-text(17, 9);
+      padding-block: 12px;
+      align-self: flex-end;
+
+      @include mobile{
+        padding-inline:5px;
+        height:50%;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+  }
+
+  &__item {
+    &:nth-child(2) {
+      .episodes__inner-name {
+        width: auto;
+        max-width: 138px;
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.episodes {
+  background-color: var(--color-dark);
+  padding: 40px;
+  border-radius: var(--border-radius-large);
+  display: flex;
+  column-gap: 50px;
+
+  @include mobile {
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 15px;
+  }
+
+  &__image {
+    @include tablet {
+      max-width: 50%;
+    }
+
+    @include mobile {
+      max-width: 680px;
+      width: 100%;
+      border-radius: var(--border-radius-large);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    &-name {
+      @include fluid-text(18, 16);
+      padding-inline: 16px;
+      background-color: var(--color-gray);
+      width: auto;
+      max-width: 73px;
+      border-radius: var(--border-radius-small);
+      margin-bottom: 48px;
+
+      @include tablet {
+        margin-bottom: 24px;
+      }
+    }
+    &-number {
+      color: var(--color-blue);
+      @include fluid-text(17, 16);
+      margin-bottom: 18px;
+    }
+    &-title {
+      letter-spacing: 2.56px;
+      margin-bottom: 28px;
+      line-height: 1;
+
+      @include tablet {
+        margin-bottom: 14px;
+      }
+    }
+    &-description {
+      @include fluid-text(22, 16);
+      color: var(--color-white-transparent);
+
+      @include tablet {
+        padding-bottom: 5px;
+      }
+
+      @include mobile {
+        margin-bottom: 18px;
+        @include fluid-text(22, 14);
+      }
+    }
+    &-button {
+      @include reset-button;
+      color: var(--color-white);
+      padding-left: 20px;
+      padding-right: 15px;
+      height: var(--button-height);
+      border-radius: var(--border-radius);
+      background-color: var(--color-blue);
+      @include fluid-text(17, 16);
+      padding-block: 12px;
+      margin-top: auto;
+      max-width: 208px;
+
+      @include mobile {
+        max-width: 100%;
+      }
+    }
+  }
+}
