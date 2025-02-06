@@ -1,0 +1,114 @@
+.subscribe {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  padding: 60px 60px 75px 60px;
+  background-color: var(--color-dark);
+  border-radius: var(--border-radius-large);
+  position: relative;
+
+  @include tablet {
+    padding: 40px 40px 55px 40px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 30px 30px 45px 30px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -31px;
+    left: -28px;
+    width: 147px;
+    height: 91px;
+    background-image: url(../../images/arrows-bottom-left.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include mobile {
+      bottom: -14px;
+      left: -13px;
+      width: 74px;
+      height: 45px;
+    }
+  }
+
+  &-body {
+    padding-block: 100px;
+
+    @include mobile{
+      padding-block: 50px;
+    }
+  }
+
+  &__inner {
+    max-width: 50%;
+
+    @include mobile {
+      max-width: 100%;
+    }
+
+    &-description {
+      color: var(--color-blue);
+      @include fluid-text(18, 16);
+    }
+
+    &-title {
+      @include fluid-text(72, 28);
+      letter-spacing: 2.88px;
+      line-height: 1.1;
+    }
+  }
+
+  &__form {
+    max-width: 522px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    @include desktop {
+      width: 50%;
+    }
+
+    @include mobile {
+      max-width: 675px;
+      width: 100%;
+    }
+
+    &-input {
+      height: var(--input-height);
+      flex-grow: 1;
+      border: none;
+      background-color: var(--color-gray);
+      border-radius: var(--border-radius);
+      padding-inline: 19px;
+      color: var(--color-white);
+
+      &::placeholder {
+        color: var(--color-white-transparent);
+      }
+
+      @include mobile {
+        height: 60px;
+      }
+    }
+
+    &-button {
+      @include reset-button;
+      height: 48px;
+      max-width: 87px;
+      background-color: var(--color-blue);
+      color: var(--color-white);
+      border-radius: var(--border-radius-small);
+      font-size: 15px;
+
+      @include mobile {
+        max-width: 100%;
+      }
+    }
+  }
+}
