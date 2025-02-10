@@ -71,6 +71,14 @@
     }
   }
 
+  &__item {
+    &-link {
+      @include hover {
+        scale: 1.5;
+      }
+    }
+  }
+
   &__image-wrapper {
     position: relative;
 

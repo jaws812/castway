@@ -1,0 +1,40 @@
+.reviews {
+  padding-block: 100px;
+
+  @include mobile {
+    padding-block: 50px;
+  }
+
+  &__item {
+    background-color: var(--color-dark);
+    border-radius: var(--border-radius-large);
+    padding-top: 55px;
+    padding-inline: 50px;
+    padding-bottom: 50px;
+
+    @include mobile {
+      padding-top: 35px;
+      padding-inline: 30px;
+      padding-bottom: 30px;
+    }
+
+    &-stars {
+      color: var(--color-yellow);
+      display: flex;
+      column-gap: 5px;
+      margin-bottom: 20px;
+    }
+
+    &-description {
+      margin-bottom: 19px;
+      @include fluid-text(36, 28);
+      line-height: 1.2;
+    }
+
+    &-name {
+      @include fluid-text(24, 16);
+      color: var(--color-white-transparent);
+      line-height: 1.16;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.star {
+  @include flex-center;
+  &--empty {
+    // class star--empty makes the star transparent
+    color: var(--color-white-transparent);
+  }
+}
